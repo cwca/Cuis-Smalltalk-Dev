@@ -6,4 +6,5 @@ if [ "$1" = "-vm" ]; then
 else
 	VM=./CuisVM.app/Contents/MacOS/Squeak
 fi
-"$VM" CuisImage/Cuis?.?-????.image -u "$@"
+"$VM" CuisImage/cwds.image -u "$@"
+#"$VM" CuisImage/Cuis?.?-????.image -u "$@"
