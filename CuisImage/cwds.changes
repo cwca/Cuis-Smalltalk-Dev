@@ -28357,7 +28357,7 @@ InlineMethod removeSelector: #blockDeclaring:evaluating:separatedBy:!
 
 ----QUIT----(30 September 2026 16:18:54) Cuis7.9-8257.image priorSource: 1031488!
 
-----STARTUP---- (4 November 2026 15:04:45) as /Users/chris/cwca/cuis/Cuis-Smalltalk-Dev/CuisImage/Cuis7.9-8257.image!
+----STARTUP---- (4 November 2026 21:43:05) as /Users/chris/cwca/cuis/Cuis-Smalltalk-Dev/CuisImage/Cuis7.9-8257.image!
 
 
 'From Cuis7.9 [latest update: #8257] on 1 October 2026 at 2:04:54 pm'!
@@ -28451,7 +28451,7 @@ InlineMethod removeSelector: #blockDeclaring:evaluating:separatedBy:!
 
 CompiledMethod removeSelector: #checkOKToAdd:at:in:!
 
-!methodRemoval: CompiledMethod #checkOKToAdd:at:in: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CompiledMethod #checkOKToAdd:at:in: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 checkOKToAdd: size at: filePosition in: fileIndex
 	"Issue several warnings if the end of the changes file is approaching
 	a fixed size limit, and finally halt with an error if the limit is reached."
@@ -28463,7 +28463,7 @@ checkOKToAdd: size at: filePosition in: fileIndex
 
 'From Cuis7.9 [latest update: #8258] on 2 October 2026 at 10:11:01 am'!
 !ClassDescription methodsFor: 'compiling' stamp: 'jmv 1/Oct/2026, 5:51:22 pm (UTC)' prior: 50353761!
-                              compileProperties: aString for: method
+                            compileProperties: aString for: method
 	"Keep any Pragmas, but use only newly specified Properties"
 
 	(Compiler evaluate: aString) ifNotNil: [ :props | 
@@ -28491,14 +28491,14 @@ Object subclass: #CodeHistory
 	poolDictionaries: ''
 	category: 'System-CodeHistory'!
 
-!classDefinition: #CodeHistory category: #'System-CodeHistory' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #CodeHistory category: #'System-CodeHistory' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #CodeHistory
 	instanceVariableNames: 'itemsData count removals'
 	classVariableNames: 'Current'
 	poolDictionaries: ''
 	category: 'System-CodeHistory'!
 !CodeHistory commentStamp: 'jmv 24/Sep/2026, 8:54:10 pm (UTC)'!
-                               Usually there's only one instance of me.
+                             Usually there's only one instance of me.
 
 itemsData, count:
 	A collection of entries holding a point in history of a CompiledMethod or ClassDefinition.
@@ -28863,7 +28863,7 @@ CodeHistory initialize!
 
 ChangeList class removeSelector: #methodSourceAndMetadataFor:into:!
 
-!methodRemoval: ChangeList class #methodSourceAndMetadataFor:into: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: ChangeList class #methodSourceAndMetadataFor:into: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 methodSourceAndMetadataFor: historyPointer into: aBlock
 	"Evaluate a block with information for method stored at historyPointer (that points to source code)
 		- method source code
@@ -28916,7 +28916,7 @@ methodSourceAndMetadataFor: historyPointer into: aBlock
 
 CuisSourceFileArray removeSelector: #filePositionFromHistoryPointer:!
 
-!methodRemoval: CuisSourceFileArray #filePositionFromHistoryPointer: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CuisSourceFileArray #filePositionFromHistoryPointer: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 filePositionFromHistoryPointer: anInteger
 	"Return the position of the source chunk addressed by anInteger"
 
@@ -28928,7 +28928,7 @@ filePositionFromHistoryPointer: anInteger
 
 CuisSourceFileArray removeSelector: #historyPointerFromFileIndex:andPosition:!
 
-!methodRemoval: CuisSourceFileArray #historyPointerFromFileIndex:andPosition: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CuisSourceFileArray #historyPointerFromFileIndex:andPosition: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 historyPointerFromFileIndex: index andPosition: position
 	"Return a sourcePointer encoding the given file index and position"
 	| answer changesFlag |
@@ -28940,7 +28940,7 @@ historyPointerFromFileIndex: index andPosition: position
 
 CuisSourceFileArray removeSelector: #fileIndexFromHistoryPointer:!
 
-!methodRemoval: CuisSourceFileArray #fileIndexFromHistoryPointer: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CuisSourceFileArray #fileIndexFromHistoryPointer: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 fileIndexFromHistoryPointer: anInteger
 	"Return the index of the source file which contains the source chunk addressed by anInteger"
 	"No source pointer => no fileIndex"
@@ -28954,7 +28954,7 @@ fileIndexFromHistoryPointer: anInteger
 
 'From Cuis7.9 [latest update: #8262] on 5 October 2026 at 4:49:57 pm'!
 !HandMorph methodsFor: 'grabbing/dropping' stamp: 'jmv 5/Oct/2026, 7:49:33 pm (UTC)' prior: 16883339!
-                         grabMorph: aMorph delta: delta
+                 grabMorph: aMorph delta: delta
 	"Grab the given morph (i.e., add it to this hand and remove it from its current owner)."
 
 	| formerOwner formerPositionInWorld |
@@ -29111,7 +29111,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name version revision versionNumber'
 	classVariableNames: ''
@@ -29124,14 +29124,14 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minVersion minRevision maxVersion pathName codePackageFile minVersionNumber maxVersionNumber'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 !Feature methodsFor: 'incrementing' stamp: 'CAP 20/Oct/2026, 2:11:18 pm (UTC)' prior: 16869069!
-                    newVersion
+                newVersion
 	"Increment major version number."
 
 	version := version + 1.
@@ -29160,7 +29160,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name version revision versionNumber'
 	classVariableNames: ''
@@ -29173,7 +29173,7 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minVersion minRevision maxVersion pathName codePackageFile minVersionNumber maxVersionNumber'
 	classVariableNames: ''
@@ -29201,7 +29201,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name version revision versionNumber'
 	classVariableNames: ''
@@ -29214,14 +29214,14 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minVersion minRevision maxVersion pathName codePackageFile minVersionNumber maxVersionNumber'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 !Feature methodsFor: 'accessing' stamp: 'CAP 20/Oct/2026, 1:58:46 pm (UTC)'!
-                          versionNumber
+                  versionNumber
 
 	^ versionNumber
 ! !
@@ -29384,21 +29384,21 @@ Object subclass: #FeatureRequirement
 
 FeatureRequirement removeSelector: #maxVersion!
 
-!methodRemoval: FeatureRequirement #maxVersion stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement #maxVersion stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 maxVersion 
 
 	^maxVersion !
 
 FeatureRequirement removeSelector: #minVersion!
 
-!methodRemoval: FeatureRequirement #minVersion stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement #minVersion stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 minVersion 
 
 	^minVersion !
 
 Feature removeSelector: #version!
 
-!methodRemoval: Feature #version stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature #version stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 version
 
 	^ version
@@ -29410,7 +29410,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name revision versionNumber'
 	classVariableNames: ''
@@ -29423,7 +29423,7 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minRevision pathName codePackageFile minVersionNumber maxVersionNumber'
 	classVariableNames: ''
@@ -29440,14 +29440,14 @@ Magnitude subclass: #SemanticVersion
 	poolDictionaries: ''
 	category: 'System-Support'!
 
-!classDefinition: #SemanticVersion category: #'System-Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #SemanticVersion category: #'System-Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Magnitude subclass: #SemanticVersion
 	instanceVariableNames: 'major minor patch'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'System-Support'!
 !SemanticVersion commentStamp: '<historical>'!
-                    Support for semantic versioning of artifacts. See https://semver.org/
+        Support for semantic versioning of artifacts. See https://semver.org/
 Cuis uses instances SemanticVersion for SystemVersion, Feature and FeatureRequirement.
 Cuis doesn't enforce actually following the rules for Semantic Versioning for packages, but we encourage their adoption.
 Note: Cuis itself doesn't strictly follow semantic versioning, as our release process is based on Dates and not on Features.
@@ -29615,7 +29615,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name revision versionNumber version'
 	classVariableNames: ''
@@ -29628,7 +29628,7 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minRevision pathName codePackageFile minVersionNumber maxVersionNumber minVersion maxVersion'
 	classVariableNames: ''
@@ -29641,14 +29641,14 @@ Object subclass: #SystemVersion
 	poolDictionaries: ''
 	category: 'System-Support'!
 
-!classDefinition: #SystemVersion category: #'System-Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #SystemVersion category: #'System-Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #SystemVersion
 	instanceVariableNames: 'versionMajor versionMinor releaseDate updatesPrefix highestUpdate lastUpdateDate version'
 	classVariableNames: 'Current'
 	poolDictionaries: ''
 	category: 'System-Support'!
 !Feature methodsFor: 'incrementing' stamp: 'CAP 20/Oct/2026, 2:51:47 pm (UTC)'!
-                               newVersion
+                         newVersion
 	"Increment major version number."
 
 	versionNumber := versionNumber + 1.
@@ -29682,7 +29682,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name version revision versionNumber'
 	classVariableNames: ''
@@ -29695,7 +29695,7 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minVersion maxVersion minRevision pathName codePackageFile minVersionNumber maxVersionNumber'
 	classVariableNames: ''
@@ -29708,7 +29708,7 @@ Object subclass: #SystemVersion
 	poolDictionaries: ''
 	category: 'System-Support'!
 
-!classDefinition: #SystemVersion category: #'System-Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #SystemVersion category: #'System-Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #SystemVersion
 	instanceVariableNames: 'version versionMajor versionMinor releaseDate updatesPrefix highestUpdate lastUpdateDate'
 	classVariableNames: 'Current'
@@ -29731,7 +29731,7 @@ SystemVersion allInstancesDo: [ :v |
 
 'From Cuis7.9 [latest update: #8270] on 20 October 2026 at 12:22:26 pm'!
 !Feature commentStamp: '<historical>' prior: 16868984!
-                   A package has a ProvidedFeature which specifies its version.  See class FeatureSpec.
+             A package has a ProvidedFeature which specifies its version.  See class FeatureSpec.
 
   name -- a symbol naming the feature
   version -- the concrete semantic version.!
@@ -29936,7 +29936,7 @@ Note: Cuis itself doesn't strictly follow semantic versioning, as our release pr
 
 Feature removeSelector: #newRevision!
 
-!methodRemoval: Feature #newRevision stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature #newRevision stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 newRevision
 	"Increment revision number"
 
@@ -29944,7 +29944,7 @@ newRevision
 
 Feature removeSelector: #printVersionRevisionOn:!
 
-!methodRemoval: Feature #printVersionRevisionOn: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature #printVersionRevisionOn: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printVersionRevisionOn: aStream
 	versionNumber printOn: aStream.
 	aStream nextPut: $..
@@ -29954,7 +29954,7 @@ printVersionRevisionOn: aStream
 
 'From Cuis7.9 [latest update: #8271] on 20 October 2026 at 1:12:50 pm'!
 !FeatureRequirement class methodsFor: 'private' stamp: 'CAP 19/Oct/2026, 6:33:53 pm (UTC)'!
-             semanticVersionFromLegacyCuisBaseVersion: aVersionNumber revision: aRevisionNumber
+         semanticVersionFromLegacyCuisBaseVersion: aVersionNumber revision: aRevisionNumber
 	"Before Semantic Versioning, Cuis 7.9 updated to #8257 was written as version 79, revision 8257"
 
 	^SemanticVersion major: aVersionNumber // 10 minor: aVersionNumber \\ 10 patch: aRevisionNumber! !
@@ -30159,7 +30159,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name version revision versionNumber'
 	classVariableNames: ''
@@ -30172,7 +30172,7 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minVersion maxVersion minRevision pathName codePackageFile minVersionNumber maxVersionNumber'
 	classVariableNames: ''
@@ -30185,7 +30185,7 @@ Object subclass: #SystemVersion
 	poolDictionaries: ''
 	category: 'System-Support'!
 
-!classDefinition: #SystemVersion category: #'System-Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #SystemVersion category: #'System-Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #SystemVersion
 	instanceVariableNames: 'version versionMajor versionMinor releaseDate updatesPrefix highestUpdate lastUpdateDate'
 	classVariableNames: 'Current'
@@ -30194,7 +30194,7 @@ Object subclass: #SystemVersion
 
 SystemVersion removeSelector: #versionRevision!
 
-!methodRemoval: SystemVersion #versionRevision stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: SystemVersion #versionRevision stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 versionRevision
 	"Answer an array of version.revision.
 	Try to do something not completely unlike 'Semantic Versioning'.
@@ -30206,14 +30206,14 @@ versionRevision
 
 FeatureRequirement class removeSelector: #name:version:revision:!
 
-!methodRemoval: FeatureRequirement class #name:version:revision: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement class #name:version:revision: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 name: aSymbol version: integerVersion revision: integerRevision
 	"Ask for a specific version, and revision"
 	^self name: aSymbol minVersion: integerVersion minRevision: integerRevision maxVersion: integerVersion!
 
 FeatureRequirement class removeSelector: #name:minVersion:minRevision:maxVersion:!
 
-!methodRemoval: FeatureRequirement class #name:minVersion:minRevision:maxVersion: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement class #name:minVersion:minRevision:maxVersion: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 name: aSymbol minVersion: minVersionOrNil minRevision: minRevisionOrNil maxVersion: maxVersionOrNil
 
 	| newInst |
@@ -30230,28 +30230,28 @@ name: aSymbol minVersion: minVersionOrNil minRevision: minRevisionOrNil maxVersi
 
 FeatureRequirement removeSelector: #minRevision!
 
-!methodRemoval: FeatureRequirement #minRevision stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement #minRevision stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 minRevision
 
 	^minRevision !
 
 FeatureRequirement removeSelector: #minVersionNumber!
 
-!methodRemoval: FeatureRequirement #minVersionNumber stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement #minVersionNumber stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 minVersionNumber 
 
 	^minVersionNumber !
 
 FeatureRequirement removeSelector: #maxVersionNumber!
 
-!methodRemoval: FeatureRequirement #maxVersionNumber stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement #maxVersionNumber stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 maxVersionNumber 
 
 	^maxVersionNumber !
 
 FeatureRequirement removeSelector: #name:minVersion:minRevision:maxVersion:!
 
-!methodRemoval: FeatureRequirement #name:minVersion:minRevision:maxVersion: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: FeatureRequirement #name:minVersion:minRevision:maxVersion: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 name: featureName minVersion: minVer minRevision: rev maxVersion: maxVer
 
 	name := featureName asSymbol.
@@ -30263,7 +30263,7 @@ name: featureName minVersion: minVer minRevision: rev maxVersion: maxVer
 
 Feature class removeSelector: #require:version:revision:!
 
-!methodRemoval: Feature class #require:version:revision: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature class #require:version:revision: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 require: featureName version: integerVersion revision: integerRevision
 	"
 	Feature require: 'Sound' version: 1 revision: 0
@@ -30273,7 +30273,7 @@ require: featureName version: integerVersion revision: integerRevision
 
 Feature class removeSelector: #name:version:revision:!
 
-!methodRemoval: Feature class #name:version:revision: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature class #name:version:revision: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 name: aSymbol version: integerVersion revision: integerRevision
 
 	| newInst |
@@ -30284,14 +30284,14 @@ name: aSymbol version: integerVersion revision: integerRevision
 
 Feature removeSelector: #revision!
 
-!methodRemoval: Feature #revision stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature #revision stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 revision
 
 	^ revision!
 
 Feature removeSelector: #newVersion!
 
-!methodRemoval: Feature #newVersion stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature #newVersion stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 newVersion
 	"Increment major version number."
 
@@ -30301,7 +30301,7 @@ newVersion
 
 Feature removeSelector: #name:version:revision:!
 
-!methodRemoval: Feature #name:version:revision: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature #name:version:revision: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 name: theName version: theVersion revision: theRevision
 
 	name := theName.
@@ -30311,7 +30311,7 @@ name: theName version: theVersion revision: theRevision
 
 Feature removeSelector: #versionNumber!
 
-!methodRemoval: Feature #versionNumber stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature #versionNumber stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 versionNumber
 
 	^ versionNumber
@@ -30323,7 +30323,7 @@ Object subclass: #Feature
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #Feature category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Feature category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #Feature
 	instanceVariableNames: 'name version'
 	classVariableNames: ''
@@ -30336,7 +30336,7 @@ Object subclass: #FeatureRequirement
 	poolDictionaries: ''
 	category: 'System-Package Support'!
 
-!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #FeatureRequirement category: #'System-Package Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #FeatureRequirement
 	instanceVariableNames: 'name minVersion maxVersion pathName codePackageFile'
 	classVariableNames: ''
@@ -30349,7 +30349,7 @@ Object subclass: #SystemVersion
 	poolDictionaries: ''
 	category: 'System-Support'!
 
-!classDefinition: #SystemVersion category: #'System-Support' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #SystemVersion category: #'System-Support' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #SystemVersion
 	instanceVariableNames: 'version releaseDate updatesPrefix lastUpdateDate'
 	classVariableNames: 'Current'
@@ -30360,7 +30360,7 @@ Object subclass: #SystemVersion
 
 'From Cuis7.9 [latest update: #0] on 20 October 2026 at 1:33:11 pm'!
 !Feature class methodsFor: 'convenience' stamp: 'CAP 20/Oct/2026, 4:32:50 pm (UTC)'!
-                 require: featureName versionNumber: versionNumber
+           require: featureName versionNumber: versionNumber
 	"
 	Feature require: 'Sound' versionNumber: 1
 	"
@@ -30368,7 +30368,7 @@ Object subclass: #SystemVersion
 
 Feature class removeSelector: #require:version:!
 
-!methodRemoval: Feature class #require:version: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Feature class #require:version: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 require: featureName version: versionNumber
 	"
 	Feature require: 'StyledTextInstaller' version: 1
@@ -30381,7 +30381,7 @@ require: featureName version: versionNumber
 
 'From Cuis7.9 [latest update: #8266] on 21 October 2026 at 3:37:17 pm'!
 !Morph methodsFor: 'geometry' stamp: 'jmv 21/Oct/2026, 6:37:06 pm (UTC)' prior: 16917763!
-                           findFullBoundsInOwner
+                         findFullBoundsInOwner
 	"Find and answer full bounds in whatever owner.
 	These might not equal #displayFullBounds at all!!
 	Note: Answers an integer rectangle"
@@ -30813,7 +30813,7 @@ require: featureName version: versionNumber
 
 Process removeSelector: #longPrintOn:!
 
-!methodRemoval: Process #longPrintOn: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Process #longPrintOn: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintOn: stream
 
 	| ctxt |
@@ -30829,14 +30829,14 @@ longPrintOn: stream
 
 UniFileStream removeSelector: #longPrintOn:!
 
-!methodRemoval: UniFileStream #longPrintOn: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: UniFileStream #longPrintOn: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintOn: aStream
 	"Do nothing, so it will print short.  Called to print the error file.  If the error was in a file operation, we can't read the contents of that file.  Just print its name instead."
 !
 
 CompiledMethod removeSelector: #longPrintOn:!
 
-!methodRemoval: CompiledMethod #longPrintOn: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CompiledMethod #longPrintOn: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintOn: aStream
 	"List of all the byte codes in a method with a short description of each" 
 
@@ -30844,7 +30844,7 @@ longPrintOn: aStream
 
 Behavior removeSelector: #longPrintOn:!
 
-!methodRemoval: Behavior #longPrintOn: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Behavior #longPrintOn: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintOn: aStream
 	"Append to the argument, aStream, the names and values of all of the receiver's instance variables.  But, not useful for a class with a method dictionary."
 
@@ -30852,7 +30852,7 @@ longPrintOn: aStream
 
 Object removeSelector: #longPrintText!
 
-!methodRemoval: Object #longPrintText stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #longPrintText stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintText
 	"Answer a Text with a description of the receiver."
 	
@@ -30861,7 +30861,7 @@ longPrintText
 
 Object removeSelector: #longPrintOn:!
 
-!methodRemoval: Object #longPrintOn: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #longPrintOn: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintOn: aStream
 	"Append to the argument, aStream, the names and values of all 
 	of the receiver's instance variables."
@@ -30876,7 +30876,7 @@ longPrintOn: aStream
 
 Object removeSelector: #longPrintString!
 
-!methodRemoval: Object #longPrintString stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #longPrintString stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintString
 	"Answer a String whose characters are a description of the receiver."
 	
@@ -30891,13 +30891,13 @@ longPrintString
 
 Process removeSelector: #browserPrintString!
 
-!methodRemoval: Process #browserPrintString stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Process #browserPrintString stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 browserPrintString
 	^self browserPrintStringFull: true!
 
 UniFileStream removeSelector: #longPrintOn:limitedTo:indent:!
 
-!methodRemoval: UniFileStream #longPrintOn:limitedTo:indent: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: UniFileStream #longPrintOn:limitedTo:indent: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintOn: aStream limitedTo: sizeLimit indent: indent
 
 	"Do nothing, so it will print short.  Called to print the error file.  If the error was in a file operation, we can't read the contents of that file.  Just print its name instead."
@@ -30906,7 +30906,7 @@ longPrintOn: aStream limitedTo: sizeLimit indent: indent
 
 Object removeSelector: #longPrintTextLimitedTo:!
 
-!methodRemoval: Object #longPrintTextLimitedTo: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #longPrintTextLimitedTo: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintTextLimitedTo: anInteger
 	"Answer a Text with a description of the receiver. limited to anInteger characters."
 
@@ -30915,7 +30915,7 @@ longPrintTextLimitedTo: anInteger
 
 Object removeSelector: #longPrintOn:limitedTo:indent:!
 
-!methodRemoval: Object #longPrintOn:limitedTo:indent: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #longPrintOn:limitedTo:indent: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintOn: aStream limitedTo: sizeLimit indent: indent
 	"Append to the argument, aStream, the names and values of all of the receiver's instance variables.  Limit is the length limit for each inst var."
 
@@ -30931,7 +30931,7 @@ longPrintOn: aStream limitedTo: sizeLimit indent: indent
 
 Object removeSelector: #longPrintStringLimitedTo:!
 
-!methodRemoval: Object #longPrintStringLimitedTo: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #longPrintStringLimitedTo: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 longPrintStringLimitedTo: aLimitValue
 	"Answer a String whose characters are a description of the receiver."
 	
@@ -30946,14 +30946,14 @@ longPrintStringLimitedTo: aLimitValue
 
 UpdatingLabelMorph removeSelector: #showPrintStringFor:!
 
-!methodRemoval: UpdatingLabelMorph #showPrintStringFor: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: UpdatingLabelMorph #showPrintStringFor: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 showPrintStringFor: anObject
 
 	self contents: anObject printString!
 
 LabelMorph removeSelector: #contentsFromPrintString:!
 
-!methodRemoval: LabelMorph #contentsFromPrintString: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: LabelMorph #contentsFromPrintString: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 contentsFromPrintString: anObject
 
 	self contents: anObject printString!
@@ -30968,14 +30968,14 @@ TextModel subclass: #Workspace
 	poolDictionaries: ''
 	category: 'System-Text'!
 
-!classDefinition: #Workspace category: #'System-Text' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Workspace category: #'System-Text' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 TextModel subclass: #Workspace
 	instanceVariableNames: 'bindings mustDeclareVariables shouldStyle fullPrintIt'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'System-Text'!
 !Workspace methodsFor: 'initialization' stamp: 'jmv 26/Oct/2026, 5:28:55 pm (UTC)' prior: 17026582!
-  initialize
+    initialize
 	
 	super initialize.
 	self initializeBindings.
@@ -31071,7 +31071,7 @@ TextModel subclass: #Workspace
 
 Workspace removeSelector: #toggleFullPrintItLabel!
 
-!methodRemoval: Workspace #toggleFullPrintItLabel stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Workspace #toggleFullPrintItLabel stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 toggleFullPrintItLabel
 
 	^self fullPrintIt 
@@ -31080,21 +31080,21 @@ toggleFullPrintItLabel
 
 Workspace removeSelector: #fullPrintIt!
 
-!methodRemoval: Workspace #fullPrintIt stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Workspace #fullPrintIt stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 fullPrintIt
 
 	^fullPrintIt ifNil: [ Preferences at: #fullPrintItInWorkspaces]!
 
 Workspace removeSelector: #toggleFullPrintIt!
 
-!methodRemoval: Workspace #toggleFullPrintIt stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Workspace #toggleFullPrintIt stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 toggleFullPrintIt
 
 	fullPrintIt := self fullPrintIt not.!
 
 TextModel removeSelector: #fullPrintIt!
 
-!methodRemoval: TextModel #fullPrintIt stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: TextModel #fullPrintIt stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 fullPrintIt
 	^true!
 
@@ -31104,7 +31104,7 @@ TextModel subclass: #Workspace
 	poolDictionaries: ''
 	category: 'System-Text'!
 
-!classDefinition: #Workspace category: #'System-Text' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Workspace category: #'System-Text' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 TextModel subclass: #Workspace
 	instanceVariableNames: 'bindings mustDeclareVariables shouldStyle'
 	classVariableNames: ''
@@ -31115,7 +31115,7 @@ TextModel subclass: #Workspace
 
 'From Cuis7.9 [latest update: #8286] on 26 October 2026 at 3:21:31 pm'!
 !Object methodsFor: 'printing' stamp: 'jmv 26/Oct/2026, 6:08:15 pm (UTC)'!
-                   limitsPrintLength
+         limitsPrintLength
 	"Most objects fully print themselves to a reasonable sized answers.
 	Some won't, and require an external limit. See implementors and senders."
 
@@ -31233,7 +31233,7 @@ TextModel subclass: #Workspace
 
 Color removeSelector: #printString!
 
-!methodRemoval: Color #printString stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Color #printString stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printString
 	"Answer a String whose characters are a description of the receiver."
 	
@@ -31241,14 +31241,14 @@ printString
 
 Number removeSelector: #printString!
 
-!methodRemoval: Number #printString stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Number #printString stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printString
 
 	^String streamContents: [:str | self printOn: str base: 10]!
 
 Object removeSelector: #printTextLimitedTo:!
 
-!methodRemoval: Object #printTextLimitedTo: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #printTextLimitedTo: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printTextLimitedTo: limit
 	"Answer a Text whose characters are a description of the receiver."
 
@@ -31256,7 +31256,7 @@ printTextLimitedTo: limit
 
 Object removeSelector: #printStringLimitedTo:!
 
-!methodRemoval: Object #printStringLimitedTo: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Object #printStringLimitedTo: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printStringLimitedTo: limit
 	"Answer a String whose characters are a description of the receiver.
 	If you want to print without a character limit, use fullPrintString."
@@ -31267,7 +31267,7 @@ printStringLimitedTo: limit
 
 'From Cuis7.9 [latest update: #8286] on 26 October 2026 at 3:26:31 pm'!
 !BreakingMethodWrapper methodsFor: 'printing' stamp: 'jmv 26/Oct/2026, 6:24:50 pm (UTC)'!
- printString
+                         printString
 
 	^ self printAs: String limitedTo: 50000! !
 !BreakingMethodWrapper methodsFor: 'printing' stamp: 'jmv 26/Oct/2026, 6:25:32 pm (UTC)'!
@@ -31277,7 +31277,7 @@ printStringLimitedTo: limit
 
 BreakingMethodWrapper removeSelector: #printTextLimitedTo:!
 
-!methodRemoval: BreakingMethodWrapper #printTextLimitedTo: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: BreakingMethodWrapper #printTextLimitedTo: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printTextLimitedTo: limit
 	"Answer a Text whose characters are a description of the receiver."
 
@@ -31285,7 +31285,7 @@ printTextLimitedTo: limit
 
 BreakingMethodWrapper removeSelector: #printStringLimitedTo:!
 
-!methodRemoval: BreakingMethodWrapper #printStringLimitedTo: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: BreakingMethodWrapper #printStringLimitedTo: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printStringLimitedTo: limit
 	"Answer a String whose characters are a description of the receiver.
 
@@ -31295,7 +31295,7 @@ printStringLimitedTo: limit
 
 MethodContext removeSelector: #printString!
 
-!methodRemoval: MethodContext #printString stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: MethodContext #printString stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 printString
 	"Answer an emphasized string in case of a breakpoint method"
 	(self method notNil and: [ self method hasBreakpoint ])
@@ -31306,7 +31306,7 @@ printString
 
 'From Cuis7.9 [latest update: #8282] on 26 October 2026 at 6:20:45 pm'!
 !SystemWindow methodsFor: 'drawing' stamp: 'CAP 26/Oct/2026, 9:16:14 pm (UTC)' prior: 16987506!
-         drawClassicFrameOn: aCanvas color: windowFrameColor
+   drawClassicFrameOn: aCanvas color: windowFrameColor
 	"Window border encompasses title area. No round corners."
 
 	aCanvas
@@ -31456,7 +31456,7 @@ printString
 
 AbstractVectorCanvas class removeSelector: #windowButtonPathData:!
 
-!methodRemoval: AbstractVectorCanvas class #windowButtonPathData: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: AbstractVectorCanvas class #windowButtonPathData: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 windowButtonPathData: aSize
 	| scale |
 	(IconPathData at: #windowButtonSize ifAbsent: nil) = aSize ifTrue: [
@@ -31476,7 +31476,7 @@ windowButtonPathData: aSize
 
 'From Cuis7.9 [latest update: #8290] on 27 October 2026 at 1:54:11 pm'!
 !CompiledMethod methodsFor: 'copying' stamp: 'jmv 27/Oct/2026, 4:26:49 pm (UTC)'!
-                           postCopy
+                         postCopy
 	"Use new instances."
 	| props |
 	props := self propertiesAsArray.
@@ -31510,7 +31510,7 @@ windowButtonPathData: aSize
 
 SystemChangeNotifier removeSelector: #methodChanged:!
 
-!methodRemoval: SystemChangeNotifier #methodChanged: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: SystemChangeNotifier #methodChanged: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 methodChanged: method
 	self
 		methodChangedFrom: nil
@@ -31523,7 +31523,7 @@ methodChanged: method
 
 'From Cuis7.9 [latest update: #8290] on 27 October 2026 at 1:54:58 pm'!
 !MethodVersionsBrowser methodsFor: 'init & update' stamp: 'jmv 27/Oct/2026, 4:45:31 pm (UTC)'!
-              scanVersionsOf: method class: class meta: meta category: category selector: selector
+            scanVersionsOf: method class: class meta: meta category: category selector: selector
 	| methodProperties historyPointer |
 
 	selectorOfMethod := selector.
@@ -31761,7 +31761,7 @@ methodChanged: method
 
 CodeFileBrowser removeSelector: #fileOutMessage!
 
-!methodRemoval: CodeFileBrowser #fileOutMessage stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CodeFileBrowser #fileOutMessage stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 fileOutMessage
 
 	self selectedMessageName ifNil: [^self].
@@ -31769,7 +31769,7 @@ fileOutMessage
 
 CodeProvider removeSelector: #fileOutMessage!
 
-!methodRemoval: CodeProvider #fileOutMessage stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CodeProvider #fileOutMessage stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 fileOutMessage
 
 	self selectedMessageName ifNotNil: [
@@ -31790,7 +31790,7 @@ fileOutMessage
 
 'From Cuis7.9 [latest update: #8290] on 27 October 2026 at 2:08:02 pm'!
 !Browser methodsFor: 'message functions' stamp: 'jmv 27/Oct/2026, 5:04:49 pm (UTC)'!
-             removeSelectedMethod
+         removeSelectedMethod
 	"If a message is selected, create a Confirmer so the user can verify that  
 	the currently selected method should be removed from the system. If  so,
 	remove it. If the Preference 'confirmMethodRemoves' is set to false,
@@ -32054,7 +32054,7 @@ fileOutMessage
 
 ChangeSorter removeSelector: #removeMessage!
 
-!methodRemoval: ChangeSorter #removeMessage stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: ChangeSorter #removeMessage stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 removeMessage
 	"Remove the selected msg from the system. Real work done by the 
 	parent, a ChangeSorter"
@@ -32073,7 +32073,7 @@ removeMessage
 
 MethodSet removeSelector: #removeMessage!
 
-!methodRemoval: MethodSet #removeMessage stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: MethodSet #removeMessage stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 removeMessage
 	"Remove the selected message from the system. 1/15/96 sw"
 	| messageName confirmation |
@@ -32090,7 +32090,7 @@ removeMessage
 
 CodeFileBrowser removeSelector: #removeMessage!
 
-!methodRemoval: CodeFileBrowser #removeMessage stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CodeFileBrowser #removeMessage stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 removeMessage
 	| messageName |
 	selectedMessage ifNil: [ ^self ].
@@ -32107,7 +32107,7 @@ CodeFileBrowser removeSelector: #removeMethod!
 
 Browser removeSelector: #removeMessageInHierarchy!
 
-!methodRemoval: Browser #removeMessageInHierarchy stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Browser #removeMessageInHierarchy stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 removeMessageInHierarchy
 	"If a message is selected, create a Confirmer so the user can verify that  
 	the currently selected message should be removed from the system. If so,  
@@ -32137,7 +32137,7 @@ Browser removeSelector: #removeSelectedMethodnHierarchy!
 
 Browser removeSelector: #removeMessage!
 
-!methodRemoval: Browser #removeMessage stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Browser #removeMessage stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 removeMessage
 	"If a message is selected, create a Confirmer so the user can verify that  
 	the currently selected message should be removed from the system. If 
@@ -32162,7 +32162,7 @@ removeMessage
 
 'From Cuis7.9 [latest update: #8290] on 27 October 2026 at 2:09:53 pm'!
 !Browser methodsFor: 'code pane' stamp: 'jmv 27/Oct/2026, 5:09:18 pm (UTC)'!
-           compileMethod: aText notifying: aRequestor
+ compileMethod: aText notifying: aRequestor
 	"Compile the code that was accepted by the user, placing the compiled method into an appropriate message category.  Return true if the compilation succeeded, else false."
 
 	"If no category (not even the '-- all --' category) is selected, select one."
@@ -32263,7 +32263,7 @@ in this part of the browser.'.
 
 Browser removeSelector: #compileMessage:notifying:!
 
-!methodRemoval: Browser #compileMessage:notifying: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Browser #compileMessage:notifying: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 compileMessage: aText notifying: aRequestor
 	"Compile the code that was accepted by the user, placing the compiled method into an appropriate message category.  Return true if the compilation succeeded, else false."
 
@@ -32277,7 +32277,7 @@ compileMessage: aText notifying: aRequestor
 
 Browser removeSelector: #defineMessageFrom:notifying:!
 
-!methodRemoval: Browser #defineMessageFrom:notifying: stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Browser #defineMessageFrom:notifying: stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 defineMessageFrom: aString notifying: aRequestor
 	"Compile the expressions in aString. Notify aRequestor if a syntax error occurs. Install the compiled method in the selected class classified under  the currently selected message category name. Answer the selector obtained if compilation succeeds, nil otherwise."
 	| selectedMessageName selector category oldMessageList scarySelector |
@@ -32316,7 +32316,7 @@ Is this really what you want to do?'))
 'From Cuis7.9 [latest update: #8295] on 27 October 2026 at 2:46:18 pm'!
 !ProtoObject methodsFor: 'printing' stamp: 'jmv 27/Oct/2026, 5:30:24 pm (UTC)'!
 !methodProperties: {#libraryName -> #MinimalKernel01}!
-    printString
+printString
 	"Answer a String whose characters are a description of the receiver. 
 	This description is to be meaningful for a Smalltalk programmer and usually includes
 	a hint on the class of the object.
@@ -32433,7 +32433,7 @@ printOn: aStream
 
 CodeFileBrowser removeSelector: #didCodeChangeElsewhere!
 
-!methodRemoval: CodeFileBrowser #didCodeChangeElsewhere stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CodeFileBrowser #didCodeChangeElsewhere stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 didCodeChangeElsewhere
 	"Determine whether the code for the currently selected method and class has been changed somewhere else."
 
@@ -32445,7 +32445,7 @@ didCodeChangeElsewhere
 
 CodeProvider removeSelector: #didCodeChangeElsewhere!
 
-!methodRemoval: CodeProvider #didCodeChangeElsewhere stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CodeProvider #didCodeChangeElsewhere stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 didCodeChangeElsewhere
 	"Determine whether the code for the currently selected method and class has been changed somewhere else."
 
@@ -32465,7 +32465,7 @@ didCodeChangeElsewhere
 
 'From Cuis7.9 [latest update: #8299] on 28 October 2026 at 6:59:26 pm'!
 !Object methodsFor: 'printing' stamp: 'sqr 13/Aug/2016, 4:25:43 pm (UTC)'!
-    printStringLimitedTo: limit
+printStringLimitedTo: limit
 	"Answer a String whose characters are a description of the receiver.
 	If you want to print without a character limit, use fullPrintString."
 
@@ -32498,7 +32498,7 @@ didCodeChangeElsewhere
 
 MethodVersionsBrowserWindow removeSelector: #updateListsAndCodeNow!
 
-!methodRemoval: MethodVersionsBrowserWindow #updateListsAndCodeNow stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: MethodVersionsBrowserWindow #updateListsAndCodeNow stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 updateListsAndCodeNow
 	"All code windows receive this message on any code change in the system"
 	model updateIfNeeded!
@@ -32507,7 +32507,7 @@ updateListsAndCodeNow
 
 'From Cuis7.9 [latest update: #8302] on 30 October 2026 at 10:24:21 am'!
 !CodeProvider methodsFor: 'self-updating' stamp: 'jmv 30/Oct/2026, 1:06:40 pm (UTC)'!
-              updateListsAndCode
+            updateListsAndCode
 	self acceptedContentsChanged.! !
 !Browser methodsFor: 'self-updating' stamp: 'jmv 30/Oct/2026, 1:10:21 pm (UTC)'!
                           updateListsAndCode
@@ -32554,7 +32554,7 @@ updateListsAndCodeNow
 
 MethodVersionsBrowser removeSelector: #updateIfNeeded!
 
-!methodRemoval: MethodVersionsBrowser #updateIfNeeded stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: MethodVersionsBrowser #updateIfNeeded stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 updateIfNeeded
 	| aMethod |
 	aMethod := classOfMethod compiledMethodAt: selectorOfMethod ifAbsent: [^ self].
@@ -32567,7 +32567,7 @@ updateIfNeeded
 
 ChangeSorter removeSelector: #updateIfNeeded!
 
-!methodRemoval: ChangeSorter #updateIfNeeded stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: ChangeSorter #updateIfNeeded stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 updateIfNeeded
 	"Recompute all of my lists."
 	| newList |
@@ -32587,14 +32587,14 @@ updateIfNeeded
 
 Browser removeSelector: #updateIfNeeded!
 
-!methodRemoval: Browser #updateIfNeeded stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: Browser #updateIfNeeded stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 updateIfNeeded
 	super updateIfNeeded.
 	self changed: #systemCategoryRoots!
 
 CodeProvider removeSelector: #updateIfNeeded!
 
-!methodRemoval: CodeProvider #updateIfNeeded stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: CodeProvider #updateIfNeeded stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 updateIfNeeded
 	self acceptedContentsChanged.!
 
@@ -32602,7 +32602,7 @@ updateIfNeeded
 
 'From Cuis7.9 [latest update: #8302] on 30 October 2026 at 10:26:58 am'!
 !ChangeSorter methodsFor: 'changeSet menu' stamp: 'jmv 30/Oct/2026, 1:08:35 pm (UTC)' prior: 16810242!
-                              fileOutAndKeep
+                      fileOutAndKeep
 	"File out the current change set."
 
 	myChangeSet fileOut.
@@ -32689,7 +32689,7 @@ To put a double-quote inside a comment, type two double-quotes in a row.
 
 ChangeSorter removeSelector: #update!
 
-!methodRemoval: ChangeSorter #update stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: ChangeSorter #update stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 update
 	"Recompute all of my lists."
 
@@ -32699,7 +32699,7 @@ update
 
 'From Cuis7.9 [latest update: #8302] on 30 October 2026 at 10:30:54 am'!
 !MessageNames methodsFor: 'as yet unclassified' stamp: 'jmv 30/Oct/2026, 1:30:39 pm (UTC)'!
-                             updateListsAndCode! !
+                           updateListsAndCode! !
 
 ----End fileIn of /Users/chris/cwca/cuis/Cuis-Smalltalk-Dev/CoreUpdates/8305-MessageNames-fix-JuanVuletich-2026Oct30-10h26m-jmv.001.cs.st----!
 
@@ -32986,7 +32986,7 @@ Magnitude subclass: #Duration
 	poolDictionaries: ''
 	category: 'Kernel-Chronology'!
 
-!classDefinition: #Duration category: #'Kernel-Chronology' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Duration category: #'Kernel-Chronology' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Magnitude subclass: #Duration
 	instanceVariableNames: 'nanos seconds'
 	classVariableNames: 'Zero'
@@ -32999,14 +32999,14 @@ Object subclass: #SHRange
 	poolDictionaries: ''
 	category: 'Tools-Syntax Highlighting'!
 
-!classDefinition: #SHRange category: #'Tools-Syntax Highlighting' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #SHRange category: #'Tools-Syntax Highlighting' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #SHRange
 	instanceVariableNames: 'start end type'
 	classVariableNames: 'NilObject'
 	poolDictionaries: ''
 	category: 'Tools-Syntax Highlighting'!
 !EquivalentNodesFinder methodsFor: 'private - visiting' stamp: 'jmv 3/Nov/2026, 7:53:45 pm (UTC)' prior: 16864040!
-                       shouldKeepSelection
+                   shouldKeepSelection
 
 	^selectionToKeep ~= (0 to: 0)! !
 !ParameterizableNodesFinder methodsFor: 'private - visiting' stamp: 'jmv 3/Nov/2026, 7:53:54 pm (UTC)' prior: 50338765!
@@ -33499,7 +33499,7 @@ Press the ', 'shift ' italic bold, ' key' italic, ' and ', 'mouse button ' itali
 
 NodesFinder class removeSelector: #noSelection!
 
-!methodRemoval: NodesFinder class #noSelection stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!methodRemoval: NodesFinder class #noSelection stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 noSelection
 	
 	^`0 to: 0`!
@@ -33510,7 +33510,7 @@ Magnitude subclass: #Duration
 	poolDictionaries: ''
 	category: 'Kernel-Chronology'!
 
-!classDefinition: #Duration category: #'Kernel-Chronology' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #Duration category: #'Kernel-Chronology' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Magnitude subclass: #Duration
 	instanceVariableNames: 'nanos seconds'
 	classVariableNames: 'Zero'
@@ -33523,7 +33523,7 @@ Object subclass: #SHRange
 	poolDictionaries: ''
 	category: 'Tools-Syntax Highlighting'!
 
-!classDefinition: #SHRange category: #'Tools-Syntax Highlighting' stamp: ' 4/Nov/2026, 8:04:45 pm (UTC)'!
+!classDefinition: #SHRange category: #'Tools-Syntax Highlighting' stamp: 'CW 5/Nov/2026, 2:43:05 am (UTC)'!
 Object subclass: #SHRange
 	instanceVariableNames: 'start end type'
 	classVariableNames: 'NilObject'
@@ -33534,7 +33534,7 @@ Object subclass: #SHRange
 
 'From Cuis7.9 [latest update: #8311] on 4 November 2026 at 9:01:48 am'!
 !Metaclass methodsFor: 'fileIn/Out' stamp: 'jmv 4/Nov/2026, 11:59:05 am (UTC)' prior: 16910375!
-     fileOutInitializerOn: aStream
+                               fileOutInitializerOn: aStream
 	(self methodDict includesKey: #initialize) ifTrue: [
 		aStream newLine.
 		aStream nextChunkPut: thisClass name , ' initialize'.
@@ -33543,8 +33543,382 @@ Object subclass: #SHRange
 
 ----End fileIn of /Users/chris/cwca/cuis/Cuis-Smalltalk-Dev/CoreUpdates/8312-SysCatFileoutFix-JuanVuletich-2026Nov04-09h01m-jmv.001.cs.st----!
 
-----SNAPSHOT----(4 November 2026 15:06:15) cwds.image priorSource: 1284029!
+----SNAPSHOT----(4 November 2026 21:44:11) cwds.image priorSource: 1284029!
 
-----QUIT----(4 November 2026 15:06:20) cwds.image priorSource: 1513001!
+----QUIT----(4 November 2026 21:44:15) cwds.image priorSource: 1513129!
 
-----STARTUP---- (4 November 2026 15:06:30) as /Users/chris/cwca/cuis/Cuis-Smalltalk-Dev/CuisImage/cwds.image!
+----STARTUP---- (4 November 2026 21:44:33) as /Users/chris/cwca/cuis/Cuis-Smalltalk-Dev/CuisImage/cwds.image!
+
+!ProtoObject methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:45:40 am (UTC)'!
+ ≡ anObject 
+	"Primitive. Answer whether the receiver and the argument are the same 
+	object (have the same object pointer). Do not redefine the message == in 
+	any other class!! Essential. No Lookup. Do not override in any subclass. 
+	See Object documentation whatIsAPrimitive."
+
+	<primitive: 110>
+	self primitiveFailed! !
+!ProtoObject methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:46:15 am (UTC)'!
+            ≢ anObject
+	"Answer whether the receiver and the argument are not the same object 
+	(do not have the same object pointer)."
+
+	self == anObject
+		ifTrue: [^ false]
+		ifFalse: [^ true]! !
+!Object methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:46:55 am (UTC)'!
+                          ≠ anObject 
+	"Answer true if the receiver and the argument do not represent the same 
+	object and false otherwise."
+
+	^self = anObject == false! !
+!BoxedFloat64 methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:47:03 am (UTC)'!
+                           ≠ aNumber 
+	"Primitive. Compare the receiver with the argument and return true
+	if the receiver is not equal to the argument. Otherwise return false.
+	Fail if the argument is not a Float. Optional. See Object documentation
+	whatIsAPrimitive."
+
+	<primitive: 48>
+	^super ~= aNumber! !
+!SmallFloat64 methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:47:11 am (UTC)'!
+                   ≠ aNumber 
+	"Primitive. Compare the receiver with the argument and return true
+	if the receiver is not equal to the argument. Otherwise return false.
+	Fail if the argument is not a Float. Optional. See Object documentation
+	whatIsAPrimitive."
+
+	<primitive: 548>
+	^super ~= aNumber! !
+!SmallInteger methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:47:18 am (UTC)'!
+                  ≠ aNumber 
+	"Compare the receiver with the argument and answer true if the receiver is not 
+	equal to the argument.  Otherwise answer false.  Fail if the argument is not a 
+	SmallInteger.  Essential.  No Lookup.  See Object documentation 
+	whatIsAPrimitive. "
+
+	<primitive: 8>
+	^super ~= aNumber! !
+!Boolean methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:47:56 am (UTC)'!
+                               ∧ aBoolean 
+	"Evaluating conjunction -- Evaluate the argument.  Then answer true if both the
+	receiver and the argument are true."
+	self subclassResponsibility! !
+!Boolean methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:48:10 am (UTC)'!
+       ∧ aBoolean 
+	"Evaluating conjunction -- Evaluate the argument.  Then answer true if both the
+	receiver and the argument are true."
+	self subclassResponsibility! !
+!Boolean methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:48:18 am (UTC)'!
+       ∧ aBoolean 
+	"Evaluating conjunction -- Evaluate the argument.  Then answer true if both the
+	receiver and the argument are true."
+	self subclassResponsibility! !
+!False methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:48:25 am (UTC)'!
+         ∧ alternativeObject 
+	"Evaluating conjunction -- answer false since receiver is false."
+
+	^self! !
+!True methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:48:31 am (UTC)'!
+          ∧ alternativeObject 
+	"Evaluating conjunction -- answer alternativeObject since receiver is true."
+
+	^alternativeObject! !
+!Boolean methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:48:56 am (UTC)'!
+               ∨ aBoolean 
+	"Evaluating disjunction (OR) -- Evaluate the argument.  Then answer true if
+	either the receiver or the argument is true."
+	self subclassResponsibility! !
+!False methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:49:03 am (UTC)'!
+    ∨ aBoolean 
+	"Evaluating disjunction (OR) -- answer with the argument, aBoolean."
+
+	^aBoolean! !
+!True methodsFor: 'logical operations' stamp: 'CW 5/Nov/2026, 2:49:10 am (UTC)'!
+            ∨ aBoolean 
+	"Evaluating disjunction (OR) -- answer true since the receiver is true."
+
+	^self! !
+!CharacterBlock methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:49:53 am (UTC)'!
+           ≤ aCharacterBlock 
+	"Answer whether the string index of the receiver does not come after that of
+	aCharacterBlock."
+	^(self > aCharacterBlock) not! !
+!CharacterSequence methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:49:58 am (UTC)'!
+                   ≤ another
+	"Answer whether the receiver sorts after aString.
+	The collation order is case sensitive."
+	"Reduce all cases to #< and #= to simplify code."
+
+	"Comparing for equality may is faster in most casts. Try it first."
+	self = another ifTrue: [ ^true ].
+
+	^self < another.! !
+!Magnitude methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:04 am (UTC)'!
+                         ≤ aMagnitude 
+	"Compare the receiver with the argument and answer with true if the 
+	receiver is less than or equal to the argument. Otherwise answer false."
+
+	^(self > aMagnitude) not! !
+!BoxedFloat64 methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:10 am (UTC)'!
+                  ≤ aNumber 
+	"Primitive. Compare the receiver with the argument and return true
+	if the receiver is less than or equal to the argument. Otherwise return
+	false. Fail if the argument is not a Float. Optional. See Object
+	documentation whatIsAPrimitive."
+
+	<primitive: 45>
+	^ aNumber adaptToFloat: self andSend: #<=! !
+!SmallFloat64 methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:15 am (UTC)'!
+                  ≤ aNumber 
+	"Primitive. Compare the receiver with the argument and return true
+	if the receiver is less than or equal to the argument. Otherwise return
+	false. Fail if the argument is not a Float. Optional. See Object
+	documentation whatIsAPrimitive."
+
+	<primitive: 545>
+	^ aNumber adaptToFloat: self andSend: #<=! !
+!Fraction methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:21 am (UTC)'!
+                     ≤ aNumber
+	aNumber isFraction ifTrue:
+		[^ numerator * aNumber denominator <= (aNumber numerator * denominator)].
+	^ aNumber adaptToFraction: self andSend: #<=! !
+!Integer methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:27 am (UTC)'!
+                ≤ aNumber
+	aNumber isInteger ifTrue:
+		[self negative == aNumber negative
+			ifTrue: [self negative
+						ifTrue: [^ (self digitCompare: aNumber) >= 0]
+						ifFalse: [^ (self digitCompare: aNumber) <= 0]]
+			ifFalse: [^ self negative]].
+	^ aNumber adaptToInteger: self andSend: #<=! !
+!LargePositiveInteger methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:32 am (UTC)'!
+        ≤ anInteger
+	"Primitive is optional.
+	See Object class >>  #whatIsAPrimitive. "
+
+	<primitive: 25>
+	^super <= anInteger.! !
+!SmallInteger methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:38 am (UTC)'!
+                   ≤ aNumber 
+	"Compare the receiver with the argument and answer true if the receiver is less 
+	than or equal to the argument.  Otherwise answer false.  Fail if the argument is 
+	not a SmallInteger.  Optional.  No Lookup.  See Object documentation 
+	whatIsAPrimitive. "
+
+	<primitive: 5>
+	^super <= aNumber! !
+!Character methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:43 am (UTC)'!
+                              ≤ aCharacter
+	"Answer whether the receiver is less than or equal to the argument."
+	"Reduce all cases to #< and #= to simplify code."
+
+	self == aCharacter ifTrue: [ ^true ].
+	^self < aCharacter.! !
+!Point methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:50:49 am (UTC)'!
+               ≤ aPoint 
+	"Answer whether the receiver is 'neither below nor to the right' of aPoint."
+
+	^x <= aPoint x and: [y <= aPoint y]! !
+!MethodReference methodsFor: 'comparisons' stamp: 'CW 5/Nov/2026, 2:50:54 am (UTC)'!
+        ≤ anotherMethodReference
+	"By default, sort by class"
+
+	^self classSymbol = anotherMethodReference classSymbol
+		ifTrue: [
+			self methodSymbol == #Comment
+				ifTrue: [ true ]
+				ifFalse: [
+					anotherMethodReference methodSymbol == #Comment
+						ifTrue: [ false ]
+						ifFalse: [
+							self classIsMeta = anotherMethodReference classIsMeta
+								ifTrue: [ self methodSymbol < anotherMethodReference methodSymbol ]
+								ifFalse: [ self classIsMeta ]	]]]
+		ifFalse: [ self classSymbol < anotherMethodReference classSymbol ]! !
+!SequenceDifference methodsFor: 'testing' stamp: 'CW 5/Nov/2026, 2:51:00 am (UTC)'!
+                 ≤ sequence
+	^lcs size <= sequence lcsSize
+! !
+!CharacterBlock methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:51:25 am (UTC)'!
+                              ≥ aCharacterBlock 
+	"Answer whether the string index of the receiver does not precede that of
+	aCharacterBlock."
+	^(self < aCharacterBlock) not! !
+!CharacterSequence methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:51:31 am (UTC)'!
+                      ≥ another
+	"Answer whether the receiver sorts after or equal to aString.
+	The collation order is case sensitive."
+	"Reduce all cases to #< and #= to simplify code."
+
+	^(self < another) not.! !
+!Magnitude methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:51:36 am (UTC)'!
+                ≥ aMagnitude 
+	"Answer whether the receiver is greater than or equal to the argument."
+
+	^aMagnitude <= self! !
+!BoxedFloat64 methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:51:42 am (UTC)'!
+                              ≥ aNumber 
+	"Primitive. Compare the receiver with the argument and return true
+	if the receiver is greater than or equal to the argument. Otherwise return
+	false. Fail if the argument is not a Float. Optional. See Object documentation 
+	whatIsAPrimitive. "
+
+	<primitive: 46>
+	^ aNumber adaptToFloat: self andSend: #>=! !
+!SmallFloat64 methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:51:49 am (UTC)'!
+             ≥ aNumber 
+	"Primitive. Compare the receiver with the argument and return true
+	if the receiver is greater than or equal to the argument. Otherwise return
+	false. Fail if the argument is not a Float. Optional. See Object documentation 
+	whatIsAPrimitive. "
+
+	<primitive: 546>
+	^ aNumber adaptToFloat: self andSend: #>=! !
+!Integer methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:51:54 am (UTC)'!
+                 ≥ aNumber
+	aNumber isInteger ifTrue:
+		[self negative == aNumber negative
+			ifTrue: [self negative
+						ifTrue: [^(self digitCompare: aNumber) <= 0]
+						ifFalse: [^(self digitCompare: aNumber) >= 0]]
+			ifFalse: [^ aNumber negative]].
+	^ aNumber adaptToInteger: self andSend: #>=! !
+!LargePositiveInteger methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:52:00 am (UTC)'!
+       ≥ anInteger
+	"Primitive is optional.
+	See Object class >>  #whatIsAPrimitive. "
+
+	<primitive: 26>
+	^super >= anInteger.! !
+!SmallInteger methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:52:05 am (UTC)'!
+                   ≥ aNumber 
+	"Compare the receiver with the argument and answer true if the receiver is 
+	greater than or equal to the argument.  Otherwise answer false.  Fail if the 
+	argument is not a SmallInteger.  Optional.  No Lookup.  See Object 
+	documentation whatIsAPrimitive."
+
+	<primitive: 6>
+	^super >= aNumber! !
+!Character methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:52:11 am (UTC)'!
+                            ≥ aCharacter
+	"Answer whether the receiver is greater than or equal to the argument."
+	"Reduce all cases to #< and #= to simplify code."
+
+	^(self < aCharacter) not.! !
+!Point methodsFor: 'comparing' stamp: 'CW 5/Nov/2026, 2:52:16 am (UTC)'!
+             ≥ aPoint 
+	"Answer whether the receiver is 'neither above nor to the left' of aPoint."
+
+	^x >= aPoint x and: [y >= aPoint y]! !
+!ExceptionHandlingCondition methodsFor: 'handling condition creation' stamp: 'CW 5/Nov/2026, 2:54:04 am (UTC)'!
+              ⧺ anExceptionHandlingCondition
+
+	"Creates a handling condition that will return true if either part of the condition handles the exception.
+	It behaves like an or
+	The following example will handle the exception
+	[ Error signal ]
+	   on:  Error, Halt 
+	  do: [ :anError | ... ]
+	
+	The following example will also handle the exception:
+	[ Halt signal ]
+	   on:  Error, Halt
+	  do: [ :anError | ... ]"
+	
+	self subclassResponsibility 
+	! !
+!ExceptionHandlingCondition methodsFor: 'handling condition creation' stamp: 'CW 5/Nov/2026, 2:54:10 am (UTC)'!
+                         ⧺ anExceptionHandlingCondition
+
+	"Creates a handling condition that will return true if either part of the condition handles the exception.
+	It behaves like an or
+	The following example will handle the exception
+	[ Error signal ]
+	   on:  Error, Halt 
+	  do: [ :anError | ... ]
+	
+	The following example will also handle the exception:
+	[ Halt signal ]
+	   on:  Error, Halt
+	  do: [ :anError | ... ]"
+	
+	self subclassResponsibility 
+	! !
+!FilterExceptionHandlingCondition methodsFor: 'handling condition creation' stamp: 'CW 5/Nov/2026, 2:54:16 am (UTC)'!
+                   ⧺ anExceptionHandlingCondition
+
+	"See ExceptionHandlingCondition>>#- for an explanation of why double dispatch is used as implementation"
+	
+	^anExceptionHandlingCondition createOrConditionWithFilterCondition: self! !
+!OrExceptionHandlingCondition methodsFor: 'handling condition creation' stamp: 'CW 5/Nov/2026, 2:54:21 am (UTC)'!
+                   ⧺ anExceptionHandlingCondition
+
+	"See ExceptionHandlingCondition>>#- for an explanation of why double dispatch is used as implementation"
+	
+	^anExceptionHandlingCondition createOrConditionWithOrCondition: self
+	! !
+!Collection methodsFor: 'copying' stamp: 'CW 5/Nov/2026, 2:54:26 am (UTC)'!
+                           ⧺ aCollection
+	^self copy addAll: aCollection; yourself! !
+!SequenceableCollection methodsFor: 'copying' stamp: 'CW 5/Nov/2026, 2:54:31 am (UTC)'!
+           ⧺ otherCollection 
+	"Concatenate two Strings or Collections."
+	
+	^ self copyReplaceFrom: self size + 1
+		  to: self size
+		  with: otherCollection
+"
+#(2 4 6 8) , #(who do we appreciate)
+((2989 printStringBase: 16) copyFrom: 4 to: 6) , ' boy!!'
+"! !
+!RunArray methodsFor: 'copying' stamp: 'CW 5/Nov/2026, 2:54:37 am (UTC)'!
+                           ⧺ aRunArray 
+	"Answer a new RunArray that is a concatenation of the receiver and
+	aRunArray."
+
+	| new newRuns answer |
+	(aRunArray isMemberOf: RunArray)
+		ifFalse: [
+			new := self copy.
+			"attempt to be sociable"
+			aRunArray do: [:each | new addLast: each].
+			^new].
+	self isEmpty ifTrue: [^aRunArray copy].
+	aRunArray isEmpty ifTrue: [^self copy].
+	(self canJoin: (values at: values size) and: (aRunArray values at: 1))
+		ifFalse: [ 
+			answer := RunArray
+				runs: runs , aRunArray runs
+				values: values , aRunArray values.
+			answer canJoinMessage: canJoinMessage.
+			^answer ].
+	newRuns := runs
+					copyReplaceFrom: runs size
+					to: runs size
+					with: aRunArray runs.
+	newRuns at: runs size put: (runs at: runs size) + (aRunArray runs at: 1).
+	answer := RunArray
+		runs: newRuns
+		values: 
+			(values
+				copyReplaceFrom: values size
+				to: values size
+				with: aRunArray values).
+	answer canJoinMessage: canJoinMessage.
+	^answer! !
+!CharacterSequence methodsFor: 'copying' stamp: 'CW 5/Nov/2026, 2:54:42 am (UTC)'!
+                     ⧺ aStringOrText
+	^ aStringOrText appendToString: self! !
+!Text methodsFor: 'copying' stamp: 'CW 5/Nov/2026, 2:54:49 am (UTC)'!
+                               ⧺ aStringOrText
+
+	^ aStringOrText appendToText: self! !
+!Exception class methodsFor: 'handling condition creation' stamp: 'CW 5/Nov/2026, 2:54:55 am (UTC)'!
+ ⧺ anExceptionHandlingCondition
+
+	"See ExceptionHandlingCondition>>,"
+	
+	^anExceptionHandlingCondition createOrConditionWithExceptionType: self! !
+
+----SNAPSHOT----(4 November 2026 21:55:36) cwds.image priorSource: 1513206!
